@@ -1,17 +1,17 @@
 # Tiles searching
 
 The method:
+
     - pre-process the dictionary:
-    (because of multiple tile searching will be done on the same dictionary, preprocessing the dictionary will help reduce the complexity)
+    (because multiple tiles searching will be done on the same dictionary, preprocessing the dictionary will help to reduce the complexity)
     first remove all the words with length less than 7
-    store a sorted tiles version of the words
+    store a sorted tiles version of all the words
 
     - pre-process the query tiles (QT):
         1- count the wildcards "spaces" (wild_cards)
         2- Remove the wildcards and put them aside
 
     - Matching:
-
     foreach sorted-tiles-set (T) the pre-processed dictionary (D):
         // initialize Query tiles (QT) index
         QT_index=0
@@ -40,6 +40,7 @@ The method:
 
 
 Analysis:
+
     N is the number of the words in the dictionary
     M is the number of the tiles in the query
     W is the average length of the dictionary's word
@@ -53,13 +54,14 @@ Analysis:
 
 
 Run the code:
-    define the new paths in the config path
-    Run the pre-processing command in the terminal:
-    python3 dictionary_preprocessing.py
 
-    Run the matching command in the terminal by passing "seven_tiles" as parameter, Please use quotations:
-    python3 main.py "seven_tiles"
+    - define the new paths in the config path
+    - Run the pre-processing command in the terminal:
+        python3 dictionary_preprocessing.py
 
-    You can use spaces for wildcards in the previous command
+    - Run the matching command in the terminal by passing "seven_tiles" as parameter, Please use quotations:
+        python3 main.py "seven_tiles"
+
+       Notice :You can use spaces for wildcards in the previous command
 
 
