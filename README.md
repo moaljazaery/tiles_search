@@ -10,6 +10,7 @@ The method:
     - pre-process the query tiles (QT):
         1- count the wildcards "spaces" (wild_cards)
         2- Remove the wildcards and put them aside
+        3- sort it 
 
     - Matching:
     foreach sorted-tiles-set (T) the pre-processed dictionary (D):
