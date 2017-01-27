@@ -4,7 +4,7 @@ The method:
 
     - pre-process the dictionary:
     (because multiple tiles searching will be done on the same dictionary, preprocessing the dictionary will help to reduce the complexity)
-    first remove all the words with length less than 7
+    first remove all the words of length greater than the maximum tiles length
     store a sorted tiles version of all the words
 
     - pre-process the query tiles (QT):
@@ -56,7 +56,7 @@ Analysis:
 
 Run the code:
 
-    - define the new paths in the config path
+    - define the new paths and the maximum tiles length in the config path 
     - Run the pre-processing command in the terminal:
         python3 dictionary_preprocessing.py
 
